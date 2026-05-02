@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Browse photos from BAANA's cultural events, festivals, and community gatherings.">
+    <title>Gallery - BAANA</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header>
+        <nav class="navbar container">
+            <div class="logo">
+                <img src="images/logo.png" alt="BAANA Logo" onerror="this.style.display='none'">
+                <span class="logo-text">BAANA</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="community.html">Community Engagement</a></li>
+                <li><a href="events.html">Events Calendar</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+            <div class="menu-toggle" aria-label="Toggle navigation menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="hero" style="height: 400px;">
+        <img src="images/gallery-hero.jpg" alt="Gallery" class="hero-bg" onerror="this.style.display='none'">
+        <div class="hero-content">
+            <h1>Photo Gallery</h1>
+            <p>Memories from Our Cultural Celebrations</p>
+        </div>
+    </section>
+
+    <!-- Introduction -->
+    <section class="container">
+        <h2 class="section-title">Our Community in Pictures</h2>
+        <p class="section-subtitle">
+            Explore photos from our vibrant cultural celebrations, festivals, and community gatherings. Each image tells a story of our rich heritage and strong community bonds.
+        </p>
+    </section>
+
+    <!-- Gallery Categories -->
+    <section class="container">
+        <div style="text-align: center; margin-bottom: 3rem;">
+            <button class="btn" style="margin: 0.5rem;" onclick="filterGallery('all')">All Photos</button>
+            <button class="btn" style="margin: 0.5rem; background-color: #666;" onclick="filterGallery('holi')">Holi</button>
+            <button class="btn" style="margin: 0.5rem; background-color: #666;" onclick="filterGallery('bihar-diwas')">Bihar Diwas</button>
+            <button class="btn" style="margin: 0.5rem; background-color: #666;" onclick="filterGallery('teej')">Teej</button>
+            <button class="btn" style="margin: 0.5rem; background-color: #666;" onclick="filterGallery('gala')">Annual Gala</button>
+        </div>
+
+        <!-- Gallery Grid -->
+        <div class="gallery-grid">
+            <!-- Holi Photos -->
+            <div class="gallery-item" data-category="holi">
+                <img src="images/gallery/holi-1.jpg" alt="Holi Celebration" onerror="this.src='https://via.placeholder.com/400x400/ff9800/ffffff?text=Holi+Celebration'">
+                <div class="gallery-overlay">
+                    <span class="gallery-overlay-text">Holi Celebration</span>
+                </div>
+            </div>
+            <div class="gallery-item" data-category="holi">
+                <img src="images/gallery/holi-2.jpg" alt="Holi Colors" onerror="this.src='https://via.placeholder.com/400x400/ff9800/ffffff?text=Holi+Colors'">
+                <div class="gallery-overlay">
+                    <span class="gallery-overlay-text">Festival of Colors</span>
+                </div>
+            </div>
+            <div class="gallery-item" data-category="holi">
+                <img src="images/gallery/holi-3.jpg" alt="Holi Dance" onerror="this.src='https://via.placeholder.com/400x400/ff9800/ffffff?text=Holi+Dance'">
+                <div class="gallery-overlay">
+                    <span class="gallery-overlay-text">Traditional Dance</span>
+                </div>
+            </div>
+            <div class="gallery-item" data-category="holi">
+                <img src="images/gallery/holi-4.jpg" alt="Holi Community" onerror="this.src='https://via.placeholder.com/400x400/ff9800/ffffff?text=Community+Joy'">
+                <div class="gallery-overlay">
+                    <span class="gallery-overlay-text">Community Together</span>
+                </div>
+            </div>
+
+            <!-- Bihar Diwas Photos -->
+            <div class="gallery-item" data-category="bihar-diwas">
+                <img src="images/gallery/bihar-diwas-1.jpg" alt="Bihar Diwas Celebration" onerror="this.src='https://via.placeholder.com/400x400/003d82/ffffff?text=Bihar+Diwas'">
+                <div class="gallery-overlay">
+                    <span class="gallery-overlay-text">Bihar Diwas 2024</span>
+                </div>
+            </div>
+            <div class="gallery-item" data-category="bihar-diwas">
+                <img src="images/gallery/bihar-diwas-2.jpg" alt="Cultural Performance" onerror="this.src='https://via.placeholder.com/400x400/003d82/ffffff?text=Cultural+Show'">
+                <div class="gallery-overlay">
+                    <span class="gallery-overlay-text">Cultural Performance</span>
+                </div>
+            </div>
+            <div class="gallery-item" data-category="bihar-diwas">
+                <img src="images/gallery/bihar-diwas-3.jpg" alt="Traditional Cuisine" onerror="this.src='https://via.placeholder.com/400x400/003d82/ffffff?text=Traditional+Food'">
+                <div class="gallery-overlay">
+                    <span class="gallery-overlay-text">Traditional Cuisine</span>
+                </div>
+            </div>
+            <div class="gallery-item" data-category="bihar-diwas">
+                <img src="images/gallery/bihar-diwas-4.jpg" alt="Community Awards" onerror="this.src='https://via.placeholder.com/400x400/003d82/ffffff?text=Awards+Ceremony'">
+                <div class="gallery-overlay">
+                    <span class="gallery-overlay-text">Awards Ceremony</span>
+                </div>
+            </div>
+
+            <!-- Teej Photos -->
+            <div class="gallery-item" data-category="teej">
+                <img src="images/gallery/teej-1.jpg" alt="Hartalika Teej" onerror="this.src='https://via.placeholder.com/400x400/4caf50/ffffff?text=Teej+Celebration'">
+                <div class="gallery-overlay">
+                    <span class="gallery-overlay-text">Hartalika Teej</span>
+                </div>
+            </div>
+            <div class="gallery-item" data-category="teej">
+                <img src="images/gallery/teej-2.jpg" alt="Mehndi Ceremony" onerror="this.src='https://via.placeholder.com/400x400/4caf50/ffffff?text=Mehndi+Art'">
+                <div class="gallery-overlay">
+                    <span class="gallery-overlay-text">Mehndi Ceremony</span>
+                </div>
+            </div>
+            <div class="gallery-item" data-category="teej">
+                <img src="images/gallery/teej-3.jpg" alt="Prayer Ceremony" onerror="this.src='https://via.placeholder.com/400x400/4caf50/ffffff?text=Prayer+Ritual'">
+                <div class="gallery-overlay">
+                    <span class="gallery-overlay-text">Prayer Ceremony</span>
+                </div>
+            </div>
+            <div class="gallery-item" data-category="teej">
+                <img src="images/gallery/teej-4.jpg" alt="Traditional Attire" onerror="this.src='https://via.placeholder.com/400x400/4caf50/ffffff?text=Traditional+Dress'">
+                <div class="gallery-overlay">
+                    <span class="gallery-overlay-text">Traditional Attire</span>
+                </div>
+            </div>
+
+            <!-- Annual Gala Photos -->
+            <div class="gallery-item" data-category="gala">
+                <img src="images/gallery/gala-1.jpg" alt="Annual Gala" onerror="this.src='https://via.placeholder.com/400x400/9c27b0/ffffff?text=Annual+Gala'">
+                <div class="gallery-overlay">
+                    <span class="gallery-overlay-text">Annual Gala Event</span>
+                </div>
+            </div>
+            <div class="gallery-item" data-category="gala">
+                <img src="images/gallery/gala-2.jpg" alt="Entertainment" onerror="this.src='https://via.placeholder.com/400x400/9c27b0/ffffff?text=Entertainment'">
+                <div class="gallery-overlay">
+                    <span class="gallery-overlay-text">Live Entertainment</span>
+                </div>
+            </div>
+            <div class="gallery-item" data-category="gala">
+                <img src="images/gallery/gala-3.jpg" alt="Dinner" onerror="this.src='https://via.placeholder.com/400x400/9c27b0/ffffff?text=Gala+Dinner'">
+                <div class="gallery-overlay">
+                    <span class="gallery-overlay-text">Gala Dinner</span>
+                </div>
+            </div>
+            <div class="gallery-item" data-category="gala">
+                <img src="images/gallery/gala-4.jpg" alt="Networking" onerror="this.src='https://via.placeholder.com/400x400/9c27b0/ffffff?text=Networking'">
+                <div class="gallery-overlay">
+                    <span class="gallery-overlay-text">Community Networking</span>
+                </div>
+            </div>
+
+            <!-- Makarsankranti Photos -->
+            <div class="gallery-item" data-category="makarsankranti">
+                <img src="images/gallery/makarsankranti-1.jpg" alt="Makarsankranti" onerror="this.src='https://via.placeholder.com/400x400/ff5722/ffffff?text=Makarsankranti'">
+                <div class="gallery-overlay">
+                    <span class="gallery-overlay-text">Makarsankranti Festival</span>
+                </div>
+            </div>
+            <div class="gallery-item" data-category="makarsankranti">
+                <img src="images/gallery/makarsankranti-2.jpg" alt="Kite Flying" onerror="this.src='https://via.placeholder.com/400x400/ff5722/ffffff?text=Kite+Flying'">
+                <div class="gallery-overlay">
+                    <span class="gallery-overlay-text">Kite Flying</span>
+                </div>
+            </div>
+            <div class="gallery-item" data-category="makarsankranti">
+                <img src="images/gallery/makarsankranti-3.jpg" alt="Bonfire" onerror="this.src='https://via.placeholder.com/400x400/ff5722/ffffff?text=Bonfire'">
+                <div class="gallery-overlay">
+                    <span class="gallery-overlay-text">Community Bonfire</span>
+                </div>
+            </div>
+            <div class="gallery-item" data-category="makarsankranti">
+                <img src="images/gallery/makarsankranti-4.jpg" alt="Traditional Sweets" onerror="this.src='https://via.placeholder.com/400x400/ff5722/ffffff?text=Tilkut+Sweets'">
+                <div class="gallery-overlay">
+                    <span class="gallery-overlay-text">Traditional Sweets</span>
+                </div>
+            </div>
+
+            <!-- Community Service Photos -->
+            <div class="gallery-item" data-category="community">
+                <img src="images/gallery/community-1.jpg" alt="Community Service" onerror="this.src='https://via.placeholder.com/400x400/2196f3/ffffff?text=Community+Service'">
+                <div class="gallery-overlay">
+                    <span class="gallery-overlay-text">Community Service</span>
+                </div>
+            </div>
+            <div class="gallery-item" data-category="community">
+                <img src="images/gallery/community-2.jpg" alt="Youth Programs" onerror="this.src='https://via.placeholder.com/400x400/2196f3/ffffff?text=Youth+Programs'">
+                <div class="gallery-overlay">
+                    <span class="gallery-overlay-text">Youth Programs</span>
+                </div>
+            </div>
+            <div class="gallery-item" data-category="community">
+                <img src="images/gallery/community-3.jpg" alt="Family Gathering" onerror="this.src='https://via.placeholder.com/400x400/2196f3/ffffff?text=Family+Time'">
+                <div class="gallery-overlay">
+                    <span class="gallery-overlay-text">Family Gathering</span>
+                </div>
+            </div>
+            <div class="gallery-item" data-category="community">
+                <img src="images/gallery/community-4.jpg" alt="Volunteer Work" onerror="this.src='https://via.placeholder.com/400x400/2196f3/ffffff?text=Volunteers'">
+                <div class="gallery-overlay">
+                    <span class="gallery-overlay-text">Volunteer Work</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Share Your Photos -->
+    <section style="background-color: #f5f5f5; padding: 80px 0;">
+        <div class="container">
+            <h2 class="section-title">Share Your Photos</h2>
+            <p class="section-subtitle">
+                Have photos from our events? We'd love to feature them in our gallery!
+            </p>
+            <div style="text-align: center; max-width: 600px; margin: 0 auto;">
+                <p style="color: #666; line-height: 1.8; margin-bottom: 2rem;">
+                    Help us capture the spirit of our community by sharing your photos from BAANA events. Your memories contribute to our collective story and help preserve our cultural heritage for future generations.
+                </p>
+                <a href="contact.html" class="btn">Submit Your Photos</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Gallery Section -->
+    <section class="container">
+        <h2 class="section-title">Video Highlights</h2>
+        <p class="section-subtitle">Watch highlights from our recent events</p>
+        <div class="cards-grid" style="grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));">
+            <div class="card">
+                <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; background: #003d82;">
+                    <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: white; text-align: center;">
+                        <div style="font-size: 4rem; margin-bottom: 1rem;">▶️</div>
+                        <p>Holi 2024 Highlights</p>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">Holi 2024 Celebration</h3>
+                    <p class="card-text">Watch the colorful moments from our Holi celebration with the community.</p>
+                </div>
+            </div>
+            <div class="card">
+                <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; background: #003d82;">
+                    <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: white; text-align: center;">
+                        <div style="font-size: 4rem; margin-bottom: 1rem;">▶️</div>
+                        <p>Bihar Diwas 2024</p>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">Bihar Diwas 2024</h3>
+                    <p class="card-text">Cultural performances and celebrations from Bihar Diwas event.</p>
+                </div>
+            </div>
+            <div class="card">
+                <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; background: #003d82;">
+                    <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: white; text-align: center;">
+                        <div style="font-size: 4rem; margin-bottom: 1rem;">▶️</div>
+                        <p>Annual Gala 2024</p>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">Annual Gala 2024</h3>
+                    <p class="card-text">Highlights from our annual gala event with entertainment and community bonding.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section style="background: linear-gradient(135deg, #003d82 0%, #0052a8 100%); padding: 80px 0; text-align: center; color: white;">
+        <div class="container">
+            <h2 style="font-size: 2.5rem; margin-bottom: 1rem; color: white;">Join Our Next Event</h2>
+            <p style="font-size: 1.2rem; margin-bottom: 2rem; max-width: 700px; margin-left: auto; margin-right: auto;">
+                Be part of these memorable moments! Check out our upcoming events and join us.
+            </p>
+            <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                <a href="events.html" class="btn" style="background-color: #ff9800;">View Events</a>
+                <a href="contact.html" class="btn btn-outline">Contact Us</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>About BAANA</h3>
+                    <p>BAANA is a 501(c)(3) non-profit organization [Tax Id - 83-1541155] committed to present and promote the language, arts, culture and traditions of Indian diaspora from the regions of Awadh, Purvanchal, Bhojpur, Mithila, Magadh, and Santhal regions.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About Us</a>
+                    <a href="community.html">Community Engagement</a>
+                    <a href="events.html">Events Calendar</a>
+                    <a href="gallery.html">Gallery</a>
+                    <a href="contact.html">Contact Us</a>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Us</h3>
+                    <p>📍 Plano, TX 75023 USA</p>
+                    <p>📧 info@baanausa.org</p>
+                    <p>📞 +1 469 630 2262</p>
+                    <div class="social-links">
+                        <a href="https://facebook.com" target="_blank" rel="noopener" class="social-link" aria-label="Facebook">
+                            <span style="font-size: 1.5rem;">f</span>
+                        </a>
+                        <a href="https://instagram.com" target="_blank" rel="noopener" class="social-link" aria-label="Instagram">
+                            <span style="font-size: 1.5rem;">📷</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Bhojpuriya and Awadhi Association of North America. All rights reserved.</p>
+                <p style="margin-top: 0.5rem; font-size: 0.9rem;">Developed & Maintained by Irisidea TechSolutions Pvt Ltd</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <div class="scroll-top" aria-label="Scroll to top">
+        <span style="font-size: 1.5rem;">↑</span>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script>
+        // Gallery Filter Function
+        function filterGallery(category) {
+            const items = document.querySelectorAll('.gallery-item');
+            const buttons = document.querySelectorAll('button[onclick^="filterGallery"]');
+            
+            // Update button styles
+            buttons.forEach(btn => {
+                btn.style.backgroundColor = '#666';
+            });
+            event.target.style.backgroundColor = '#ff9800';
+            
+            // Filter items
+            items.forEach(item => {
+                if (category === 'all' || item.dataset.category === category) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</body>
+</html>
